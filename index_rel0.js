@@ -1,35 +1,16 @@
 "use strict"
 
-class SuperPower {
-    constructor() {
-    }
-    use_laser_vision() {
-        console.log('ZAAAPPP!!')
-    }
-
-    be_invisible() {
-        console.log('MENGHILANG!!')
-    }
-
-    turn_into_giant() {
-        console.log('HUAHAHAHAHA!!')
-    }
-}
-
-
-
 class Animal {
     constructor(num_legs, is_warm_blooded) {
         this.num_legs= num_legs
         this.is_warm_blooded= is_warm_blooded
-        this.super_power= new SuperPower()
 
     }
 }
 
 class Frog extends Animal {
     constructor(num_legs = 4) {                    // => menjadi default value krn diperlakukan dinamis
-        super(num_legs, false, this.super_power.use_laser_vision() )
+        super(num_legs, false)
         // this.num_legs= 2 ; //OVERRIDING => POLYMOR{HYSM}
         // this.is_warm_blooded= false
     }
@@ -75,15 +56,11 @@ class Snake extends Animal {
     }
 }
 
+let frog = new Frog(3);
+console.log(frog)
 
 let chimpanzee= new Chimpanzee()
-chimpanzee.super_power.use_laser_vision()
 console.log(chimpanzee)
 
-let chicken= new Chicken()
-chicken.super_power.be_invisible()
-console.log(chicken)
-
 let snake= new Snake()
-snake.super_power.turn_into_giant()
 console.log(snake)
