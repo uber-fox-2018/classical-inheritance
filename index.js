@@ -6,7 +6,7 @@ class Animal {
         this.superpower = new SuperPower();
     }
     move() {
-        console.log(`Moving with ${this.number_of_legs} legs.`);
+        console.log(`Moves with ${this.number_of_legs} legs.`);
     }
 }
 
@@ -47,7 +47,7 @@ class Bat extends TwoLegged {
         this.is_warm_blooded = true;
     }
     move() {
-        console.log(`Flies with a pair of wings.`);
+        console.log(`Flies with a pair of wing.`);
     }
 }
 
